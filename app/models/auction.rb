@@ -6,6 +6,6 @@ class Auction < ApplicationRecord
 	mount_uploader :auction_pack, AuctionPackUploader # Uploader for this model
 	#Association
 	belongs_to :user
-	has_many :photos, :inverse_of => :auction,dependent: :destroy
+	has_many :photos, :inverse_of => :auction, dependent: :destroy
 	accepts_nested_attributes_for :photos
 end
