@@ -1,0 +1,82 @@
+<div class="container">
+        <hr/>
+        
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Account</h4>
+                    </div>
+                    
+                    <div id="profile-menu" class="col-md-12">
+                        <%= render 'agent_menu' %>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="profile-infos" class="col-md-12 last-profile-section">
+            <%= form_for @user, :method => :put, :html => {:class => 'form'} do |f| %>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :last_name, "Contact Name" %>
+                            <%= f.text_field :last_name, class:"form-control", placeholder:"Last Name*" %>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <%= f.label :company_name, "Company Name" %>
+                            <%= f.text_field :company_name, class:"form-control", placeholder:"Company Name*" %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <%= f.label :address, "Address" %>
+                            <%= f.text_field :address, class:"form-control", placeholder:"Address*" %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :telephone, "Telephone" %>
+                            <%= f.text_field :telephone, class:"form-control", placeholder:"Telephone Number*" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <%= f.label :email, "Email" %>
+                            <%= f.text_field :email, class:"form-control", placeholder:"Email*" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <%= f.label :office_number, "Number of Offices" %>
+                            <%= f.text_field :office_number, class:"form-control", placeholder:"Number Of Offices*" %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-10">
+                        <div class="form-group">
+                            <%= f.submit "Save Changes", class:"form-control btn btn-default" %>
+                        </div>
+                    </div>
+                </div>
+
+                <% end %>
+            </div>
+            
+        </div>
+        
+      </div>

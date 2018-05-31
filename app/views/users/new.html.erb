@@ -1,0 +1,47 @@
+<div id="login-registration-container" class="">
+        
+        <div id="login-registration-form-container" class="container">
+            <!-- Container -->
+            <div class="row">
+                <div id="login-form-container" class="col-md-5">
+                    <div class="login-registration-form-header">
+                        <h4>SIGN IN</h4>
+                    </div>
+                    <div id="" class="login-registration-form-wrapper">
+                        <!-- Form partials -->
+                         <%= render 'login' %>
+                    </div>
+                </div>
+            
+                <div id="registration-form-container" class="col-md-6 col-md-offset-1">
+                    <div class="login-registration-form-header">
+                        <h4>CUSTOMER REGISTRATION</h4>
+                    </div>
+                    <div id="" class="login-registration-form-wrapper">
+                        
+                        <div class="row registration-menu">
+                            <div class="col-md-12 registration-menu-container">
+                            <span class="registration-selector registration-selector-active"><a href="#" id="individual-registration-selector">INDIVIDUAL</a></span><span class="registration-selector"><a href="#" id="company-registration-selector">COMPANY</a></span>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- Individual registration -->
+                        <div id="individual-registration">
+                            <!-- form partials -->
+                            <%= render 'individual_registration' %>
+                        </div>
+                        <!-- End individual registration -->
+                        
+                        <!-- Company registration -->
+                        <div id="company-registration">
+                            <!-- Insert partials -->
+                             <%= render 'company_registration' %>
+                        </div>
+                        <!-- End company registration -->
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End Container -->
+        </div>
+      </div>

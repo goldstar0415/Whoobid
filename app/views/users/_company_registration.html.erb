@@ -1,0 +1,129 @@
+<%= form_for @user, :html => {class: "form", id: "company-registration-form"} do |f| %>
+                
+                               
+
+
+                                    <div class="row">
+                                        <%= f.hidden_field :role, value: :agent %>
+                                        <div class="col-md-6">
+                                          <div class="form-group">
+                                            <%= f.text_field :company_name, class:"form-control", placeholder:"Company Name*" %>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                              <%= f.text_field :office_number, class:"form-control", placeholder:"Office Number*" %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                            <%= f.text_field :first_name, class:"form-control", id: "company_first_name", placeholder:"First Name*" %>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group">
+                                          <%= f.text_field :last_name, class:"form-control", id: "company_last_name", placeholder:"Last Name*" %>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                   <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <%= f.select(:title,
+                                          options_for_select([['Mr', 'Mr'], ['Ms', 'Ms'], ['Mrs', 'Mrs']]),
+                                        {} ,{class:"form-control", id: "company-select-title"}) %>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <%= f.date_field :dob, class:"form-control", id: "company_doc", placeholder:"DOB*" %>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <%= f.text_field :postcode, class:"form-control", id: "company_postcode", placeholder:"Post Code*" %>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <button class="btn btn-dark form-control">FIND ADDRESS</button>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h4>Not in the UK?</h4>
+                                        <p>
+                                            If you are not a UK resident please contact our auction team to discuss your options.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                      <%= f.text_field :telephone, class:"form-control", id: "company_telephone",placeholder:"Telephone Number*" %>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <%= f.email_field :email, class:"form-control", id: "company_email", placeholder:"Email*" %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p>
+                                            The password entered must be at least 8 characters in length and contain an uppercase letter, a lowercase letter, a digit and a special character.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <%= f.password_field :password, class:"form-control", placeholder:"Password*", id: "company_password", autocomplete: "off" %>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Password Confirmation*", id: "company_password_confirmation", autocomplete: "off" %>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                          <%= check_box_tag :terms_of_service, true, false, { class:"login-registration-checkbox"} %>
+                                          <%= label_tag :terms_of_service, "I have read and agree to the Terms & Conditions of website use*" %>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="">
+                                          <%= check_box_tag :calls_agreement, true, false, { class:"login-registration-checkbox"} %>
+                                          <%= label_tag :calls_agreement, "I understand that calls made to and from IAM Sold are recorded for training and monitoring purposes*" %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                          <%= f.submit "REGISTER", class:"form-control" %>
+                                        </div>
+                                    </div>
+                                </div>
+<% end %>

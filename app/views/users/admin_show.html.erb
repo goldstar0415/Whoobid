@@ -1,0 +1,156 @@
+<div class="container">
+        <hr/>
+        
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Account</h4>
+                    </div>
+                    
+                    <div id="profile-menu" class="col-md-12">
+                        <ul class="profile-navigation">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Identity Verification</a></li>
+                            <li><a href="#">Payment Details</a></li>
+                            <li><a href="#">Solicitor Details</a></li>
+                            <li><a href="#">Current/Previous Bids</a></li>
+                            <li><a href="#">Watchlist</a></li>
+                        </ul>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="profile-infos" class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4 class="profile-header">Name</h4>
+                        <p><%= user_name %></p>
+                    </div>
+                    
+                    <div class="col-md-5">
+                        <div class="col-md-6">
+                            <h4 class="profile-header">Email</h4>
+                            <p><%= current_user.email %></p>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-default profile-button">Resend Verification</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-5">
+                        <div class="col-md-6">
+                            <h4>Password</h4>
+                            <p><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-default profile-button">Reset Password</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr/>
+            </div>
+            
+            
+            <div class="col-md-12 last-profile-section">
+                <h4>Marketing preferences</h4>
+                <div class="row">
+                    <form class="form">
+                        <div class="col-md-6">
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="profile-header">Email</h4>
+                                    <p>I'd like to receive email updates for the following</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p>1. Properties available by online auctions</p>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="auction" value="true"> Yes<br>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="auction" value="false" checked> No<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p>2. New features alert</p>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="new_feature" value="true"> Yes<br>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="new_feature" value="false" checked> No<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p>3. New properties build for sale with our partners</p>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="new_property" value="true"> Yes<br>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="new_property" value="false" checked> No<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="profile-header">Phone/SMS</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p>I am happy to be contated by phone or SMS about properties I have shown an interst in.</p>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <div class="col-md-6">
+                                                <input type="radio" name="property_interested_in" value="true"> Yes<br>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="radio" name="property_interested_in" value="false" checked> No<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-md-offset-6">
+                                    <input type="submit" value="Save Changes" class="form-control profile-button"/>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+      </div>

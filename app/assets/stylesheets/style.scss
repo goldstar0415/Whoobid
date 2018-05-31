@@ -1,0 +1,503 @@
+/*
+ *
+ */
+body{
+    width: 100%;
+    /*background-color: #F8F8F8;*/
+}
+
+h3{
+    color: #EF6C00;
+}
+
+.text-white{
+    color: #FFFFFF;
+}
+
+a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+/*
+ *
+ */
+
+#head{
+    padding-top: 2em;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.dark-button{
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF
+}
+
+/*
+ *
+ */
+
+/*
+ *
+ */
+
+
+/*
+ *
+ */
+
+/*
+ *
+ */
+
+/*
+ *
+ */
+
+#head{
+    margin-bottom: 20px;
+}
+
+#content{
+}
+
+#head, #content, #footer{
+    
+}
+
+#search-fiter-container, #marketing-message, #property-categories, #why-whoobid{
+    margin-bottom: 30px;
+}
+
+#search-filter-container{
+    position: relative;
+    height: 35em;
+    background-image: image-url('search_back.jpg');
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    /*border: 1px solid;*/
+}
+
+#search-filter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*border: 1px solid white;*/
+    /*height: 20em;*/
+    padding-top: 4em;
+}
+
+#search-filter-header-text{
+    margin-bottom: 5em;
+    color: white;
+}
+
+#search-filter-form-container{
+    background-color: rgba(0,0,0,0.5);
+    padding: 2em;
+}
+
+.button-submit{
+    /*background-color: #EF6C00;*/
+    background-color: #E65100;
+    border-color: #E65100;
+    color: #FFFFFF;
+}
+
+.button-submit:hover{
+    background-color:#FFFFFF;
+    border-color: #FFFFFF;
+    color: #E65100;
+}
+
+/*
+ *
+ */
+.property-category{
+    height: 450px;
+    /*border: 1px solid;*/
+}
+
+.property-category-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#property-categorie-un{
+    background-image: image-url('residential.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#property-categorie-deux{
+    background-image: image-url('commercial.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#property-categorie-trois{
+    background-image: image-url('how_it_works.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#property-categorie-quatre{
+    background-image: image-url('sell_your_house.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.property-category-link{
+    text-decoration: none;
+    color: white;
+}
+
+.property-category-link:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.property-category-link:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.property-category-link:active{
+    text-decoration: none;
+    color: white;
+}
+
+.property-category-overlay-text-container{
+   position: relative;
+   top: 25em;
+   left: 5em;
+}
+
+#why-whoo-bid-item-container{
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.why-whoo-bid-icon{
+    margin-bottom: 3em;
+}
+
+.why-whoo-bid-icon-img{
+    height: 5em;
+    fill: #EF6C00;
+}
+/*
+ * Navigation, Footer Navigation
+ */
+.navigation-menu, .footer-navigation-menu, .footer-navigation-sn-menu{
+    list-style-type: none;
+}
+
+.navigation-menu li, .footer-navigation-menu li, .footer-navigation-sn-menu li, .profile-navigation li{
+    display: inline-block;
+}
+
+.navigation-menu li:not(:last-child), .footer-navigation-menu li:not(:last-child), .profile-navigation li{
+    margin-right: 15px;
+}
+
+.footer-navigation-sn-menu li:not(:last-child){
+    margin-right: 10px;
+}
+
+.navigation-menu a:link, .navigation-menu a:hover, .navigation-menu a:active, .profile-navigation a:link, .profile-navigation a:hover, .profile-navigation a:active{
+    text-decoration: none;
+}
+
+.navigation-menu a, .profile-navigation a{
+    color: #000000;
+}
+
+.navigation-menu a:link, .profile-navigation a:link{
+    color: #000000;
+}
+
+.navigation-menu a:hover, .profile-navigation a:hover{
+    padding-bottom: 1em;
+    border-bottom: 1px solid #EF6C00;
+}
+
+.navigation-menu a:active, .profile-navigation a:active{
+    padding-bottom: 1em;
+    border-bottom: 1px solid #EF6C00;
+}
+
+.menu-sign-in{
+    background-color: #EF6C00;
+    border-radius: 5px;
+    border: 1px solid #EF6C00;
+    width: 13%;
+    height: 7%;
+}
+
+.menu-sign-in a{
+    color: #FFFFFF;
+}
+
+.menu-sign-in:hover{
+    background-color: #FFFFFF;
+}
+
+.menu-sign-in a:hover{
+    color: #EF6C00;
+}
+
+.small-horizontal-line{
+    width: 15em;
+    border: 1px solid #000000;
+}
+/*
+ *Footer
+ */
+
+.footer-title-container{
+    margin-bottom: 1em; 
+}
+
+.footer-title{
+    position: relative;
+    padding-bottom: 1em;
+    display: inline-block;
+}
+
+.footer-title:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #EF6C00;
+}
+
+#footer-top{
+    min-height: 25em;
+    padding-top: 5em;
+    padding-bottom: 2em;
+    background-color: #404040;
+    color: #FFFFFF;
+    
+}
+
+#footer-navigation-sn{
+    background-color: #303030;
+    color: #FFFFFF;
+    min-height: 3.5em;
+}
+
+#footer-gallery{
+    /*border: 1px solid;*/
+}
+
+.footer-gallery-photo{
+    /*padding-left: 10px;
+    padding-right: 15px;*/
+    margin-bottom: 10px;
+}
+
+#footer-about div + p{
+    color: #E0E0E0;
+}
+
+.footer-gallery-photo-element:not(:last-child){
+    margin-right: 1px;
+}
+
+#footer-navigation-sn, #footer-navigation, #footer-social-network{
+    /*border: 1px solid;*/
+}
+
+#footer-navigation-sn{
+    padding-top: 1em;
+}
+
+.footer-navigation-menu, .footer-navigation-sn-menu{
+    padding: 0;
+}
+
+.footer-navigation-menu a{
+    color: #A9A9A9;
+}
+
+.footer-navigation-sn-menu a{
+    color: #FFFFFF;
+}
+
+/*
+ *
+ *LOGIN PAGE
+ *
+ */
+
+#login-registration-container{
+    background-color: #F8F8F8;
+    background-image: image-url('commercial.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 25em;
+    min-height: 100%;
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+#login-registration-form-container{
+    min-height: 30em;   
+}
+
+.login-registration-form-header > h4{
+    vertical-align: middle;
+}
+
+#login-form-container, #registration-form-container{
+    background-color: #FFFFFF;
+    /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* all side */
+}
+
+.login-registration-form-wrapper{
+   /*background-color: #FFFFFF;*/
+   padding: 15px;
+}
+
+.login-registration-form-header{
+    /*width: 50%;*/
+    width: 22em;
+    min-height: 3.5em;
+    margin: auto;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    background-color: #EF6C00;
+    text-align: center;
+    color: #FFFFFF;
+    position:relative;
+    top: -1.5em;
+    z-index: 1;
+}
+
+.registration-menu{
+    margin-bottom: 1em;
+}
+
+.registration-menu-container{
+    border-bottom: 1px solid gray;
+}
+
+.registration-selector{
+    display: inline-block;
+    display: inline-block;
+    padding-bottom: 1em;
+    min-width: 3em;
+}
+
+.registration-selector-active{
+    border-bottom: 2px solid #EF6C00;
+}
+
+.registration-selector:first-of-type{
+    margin-right: 2em;
+}
+
+.registration-selector a{
+    font-weight: bold; 
+    color: #000000;
+}
+
+/*.registration-selector:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #EF6C00;
+    
+}*/
+
+.registration-selector a:selected{
+    
+}
+
+.registration-selector a:hover{
+    
+}
+
+.login-registration-form-wrapper .form-group input[type=checkbox]{
+    border: 1px solid #EF6C00;
+}
+
+.login-registration-checkbox{
+    border: 1px solid #EF6C00;
+}
+
+.login-registration-form-wrapper .form-group input[type=checkbox] + span{
+    display: inline-block;
+    margin-left: 2em;
+    /*color: #EF6C00;*/
+}
+
+.login-registration-form-wrapper .form-group input[type=submit]{
+    border: none;
+    background-color: #EF6C00;
+    color: #FFFFFF;
+}
+
+#company-registration{
+    display: none;
+}
+
+/*
+ *Profile
+ */
+.profile-navigation{
+    padding-left: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.last-profile-section{
+    padding-bottom: 3em;
+}
+
+.last-profile-section-empty{
+    min-height: 20em;
+}
+
+.profile-button{
+    background-color: #EF6C00;
+    border-color: #EF6C00;
+    color: #FFFFFF;
+}
+
+.profile-header{
+    color: #EF6C00;
+}
+
+
+/*
+*Auction
+*/
+
+.auction-chevron-navigation{
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}

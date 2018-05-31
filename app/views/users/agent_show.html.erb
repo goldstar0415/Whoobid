@@ -1,0 +1,30 @@
+<div class="container">
+        <hr/>
+        
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Account</h4>
+                    </div>
+                    
+                    <div id="profile-menu" class="col-md-12">
+                        <%= render 'agent_menu' %>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="" class="col-md-12 last-profile-section-empty">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="profile-header">Welcome</h2>
+                        <p><%= current_user.company_name %></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>    
+</div>

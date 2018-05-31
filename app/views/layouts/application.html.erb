@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whoobid</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <div class="container-fluid">
+    
+      <div id="header" class="col-md-12">
+        
+        <div class="row">
+          
+          <div id="cookies-flash" class="col-md-12 text-center">
+            <span></span>
+          </div>
+
+          <% if flash %>
+          <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+          <% end %>
+          
+          <div id="head" class="col-md-12">
+            <div class="row">
+              
+              <div id="logo" class="col-md-2 col-md-offset-2">
+                <div>
+                  <span>Whoobid</span>
+                </div>
+              </div>
+              
+              <div id="navigation" class="col-md-6 col-md-offset-2">
+                <ul class="navigation-menu">
+                  <li><%= link_to "HOME", root_path %></a></li>
+                  <li><a href="#">AUCTIONS</a></li>
+                  <li><a href="#">AGENTS</a></li>
+                  <li><a href="#">REVIEWS</a></li>
+                  <li><a href="#">ABOUT</a></li>
+
+                  <% if logged_in? %>
+                  <li class="menu-sign-in text-center"><%= link_to 'PROFILE', '#' %></li>
+                  <li class="menu-sign-in text-center"><%= link_to 'LOG OUT', session_destroy_path, method: :delete %></li>
+                  <% else %>
+                  <li class="menu-sign-in text-center"><%= link_to 'SIGN IN', new_user_path %></li>
+                  <% end %>
+
+                  <li><a href="#"><i class="fas fa-search fa-lg"></i></a></li>
+                </ul>
+              </div>
+              
+              <!--
+              <div id="profile-search-bar">
+                
+              </div>
+              -->
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <!-- End Header -->
+
+
+    <!-- Yield -->
+    <div id="content">
+
+    <%= yield %>
+    
+    </div>
+    <!-- End Yield -->
+
+    <!-- Footer -->
+    <div class="container-fluid no-padding"> 
+    <div id="footer" class="col-md-12">
+      
+      <div class="row">
+        
+        <div id="footer-top" class="col-md-12">
+          
+          <div class="row">
+            
+            <div id="footer-about" class="col-md-4">
+              <div class="footer-title-container">
+              <h4 class="footer-title">ABOUT US</h4>
+              </div>
+              
+              <p>
+                Curabitur elementum urna eget eros iaculis ultricies. Integer dictum orci sed ligula pellentesque, vel fermentum leo finibus.</br>
+                Sed iaculis sapien egestas, mollis augue egestas, dapibus erat. Suspendisse porta sapien velit, eu auctor felis rutrum ut.</br>
+                Maecenas maximus tellus nulla, in finibus lacus imperdiet vel. Suspendisse pellentesque consectetur vehicula.</br>
+                Pellentesque vel mauris commodo ante sagittis volutpat. Sed est sapien, mattis ut velit nec, tempor convallis sapien. Suspendisse vitae odio eget nulla cursus posuere nec at mi.</br>
+                Proin fermentum semper odio, et congue lectus vehicula nec. Morbi tellus metus, eleifend vitae consequat sit amet, dictum at eros.</br>
+              </p>
+            </div>
+            
+            <div id="footer-gallery" class="col-md-6 col-md-offset-2">
+              <div class="footer-title-container">
+              <h4 class="footer-title">MY PHOTO STREAM</h4>
+              </div>
+              <div class="footer-gallery-photo">
+                <div class="row">
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <div class="footer-gallery-photo">
+                <div class="row">
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                  <div class="footer-gallery-photo-element col-md-2">
+                    <%= link_to image_tag('h.jpg', :class => 'img-responsive'), '#' %>
+                  </div>
+                  
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- -->
+        
+        <div id="footer-navigation-sn" class="col-md-12">
+          
+          <div class="row">
+            
+            <div id="footer-navigation" class="col-md-4">
+              <ul class="footer-navigation-menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">AUCTIONS</a></li>
+                <li><a href="#">AGENTS</a></li>
+                <li><a href="#">REVIEWS</a></li>
+                <li><a href="#">ABOUT</a></li>
+              </ul>
+            </div>
+            
+            <div id="footer-social-network" class="col-md-6 col-md-offset-2">
+              <div class="col-md-10">
+                <ul class="footer-navigation-sn-menu pull-right">
+                  <li><a href="#"><span class="skype"><i class="fab fa-skype fa-lg"></i></span></a></li>
+                  <li><a href="#"><span class="facebook"><i class="fab fa-facebook-f fa-lg"></i></span></a></li>
+                  <li><a href="#"><span class="google-plus"><i class="fab fa-google-plus-g fa-lg"></i></span></a></li>
+                  <li><a href="#"><span class="youtube"><i class="fab fa-youtube fa-lg"></i></span></a></li>
+                  <li><a href="#"><span class="linkedin"><i class="fab fa-linkedin-in fa-lg"></i></span></a></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    <!-- End Footer -->
+    
+  </div>
+  </body>
+</html>
