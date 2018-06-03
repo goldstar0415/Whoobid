@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   resources :users
 
   resources :users do
-  resources :auctions
+    resources :auctions
+  end
+
+  resources :users do
+    resources :identities, only: [:new, :create, :show]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

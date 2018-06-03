@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 	  def require_valid_user!
 	    if current_user.nil?
 	      flash[:error] = 'You must be logged in to access that page!'
-	      redirect_to login_path
+	      redirect_to new_user_path
 	    end
 	  end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_30_224307) do
+ActiveRecord::Schema.define(version: 2018_06_02_005255) do
 
   create_table "auctions", force: :cascade do |t|
     t.string "address", null: false
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 2018_05_30_224307) do
     t.string "vendor_id"
     t.string "auction_pack"
     t.index ["user_id"], name: "index_auctions_on_user_id"
+  end
+
+  create_table "identities", force: :cascade do |t|
+    t.string "name"
+    t.string "adress"
+    t.date "dob"
+    t.string "id_number"
+    t.string "document"
+    t.string "address_proof"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|

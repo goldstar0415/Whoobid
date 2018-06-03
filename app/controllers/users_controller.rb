@@ -29,12 +29,21 @@ before_action :reset_session, except: [:show, :edit, :update]
 
 	def update
 		@user = User.find(params[:id])
-	    if @user.update_attributes(user_update_params)
-	      flash[:success] = "Company Profile Updated With Success"
-	      redirect_to edit_user_path
-	    else
-	      render 'edit'
-	    end
+		if @user.client?
+			if @user.update_attributes(client_password_params)
+				flash[:success] = "Client Password Successfully Updated"
+				redirect_to user_path
+			else
+				render 'edit'
+			end
+		elsif @user.agent?
+		    if @user.update_attributes(user_update_params)
+		      flash[:success] = "Company Profile Updated With Success"
+		      redirect_to edit_user_path
+		    else
+		      render 'edit'
+		    end
+		end
 	end
 
 	private
@@ -46,5 +55,9 @@ before_action :reset_session, except: [:show, :edit, :update]
 
 	    def user_update_params
 	      params.require(:user).permit(:last_name, :address, :telephone, :email, :company_name, :office_number)
+	    end
+
+	    def client_password_params
+	    	params.require(:user).permit(:password)
 	    end
 end

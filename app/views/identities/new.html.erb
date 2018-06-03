@@ -1,0 +1,40 @@
+<div class="container">
+        <hr/>
+        
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Account</h4>
+                    </div>
+                    
+                    <div id="profile-menu" class="col-md-12">
+                        <ul class="profile-navigation">
+                            <li><%= link_to "Profile", user_path(current_user.id) %></li>
+                            <li><%= link_to "Identity Verification", new_user_identity_path(current_user.id) %></li>
+                            <li><a href="#">Payment Details</a></li>
+                            <li><a href="#">Solicitor Details</a></li>
+                            <li><a href="#">Current/Previous Bids</a></li>
+                            <li><a href="#">Watchlist</a></li>
+                        </ul>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="client-password-change" class="col-md-12">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <%= render 'form' %>
+                    </div>
+                
+                </div>
+                
+                <hr/>
+            </div>
+            
+            
+        </div>
+      </div>

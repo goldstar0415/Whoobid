@@ -501,3 +501,84 @@ input[readonly] {
   background-color: white !important;
   cursor: text !important;
 }
+
+/*
+ *Card
+ */
+#user-bid-history-card{
+    /*padding-bottom: 3em;*/
+}
+
+.user-bid-container{
+    /*padding-bottom: 3em;
+    height: 100%;*/
+}
+
+.user-bid-history-card{
+    /*height: 39.0625em;*/
+    /*max-height: 39.0625em;*/
+}
+
+.user-bid-history-card-hover-alert{
+    min-width: 50%;
+    min-height: 2.5em;
+    border-radius: 25px;
+    background-color: #EF6C00;
+    color: #FFFFFF;
+    position: relative;
+    top: -2.5em;
+}
+
+.card-header-text-vertical-align{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.current-bid-status{
+    background-color: #787878;
+    color: #FFFFFF;
+    border-radius: 25px;
+    min-height: 2.5em;
+    margin-bottom: 1em;
+}
+
+.text-vertical-align{
+    position: relative;
+    
+    transform: translateY(35%);
+}
+
+.current-bid-address{
+    margin-bottom: 3em;
+    color: #9c9c9c;
+}
+
+.current-bid-property-type{
+    margin-bottom: 1em;
+    color: #EF6C00;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.current-bid-text, .current-bid-price{
+    font-size: 20px;
+}
+
+.current-bid-price{
+    color: red;
+}
+
+.card-edit-button, .card-delete-button{
+    width: 100%;
+}
+
+.card-edit-button{
+    
+}
+
+.card-delete-button{
+    
+}

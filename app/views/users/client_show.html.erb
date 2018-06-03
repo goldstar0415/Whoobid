@@ -11,8 +11,8 @@
                     
                     <div id="profile-menu" class="col-md-12">
                         <ul class="profile-navigation">
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Identity Verification</a></li>
+                            <li><%= link_to "Profile", user_path(current_user.id) %></li>
+                            <li><%= link_to "Identity Verification", new_user_identity_path(current_user.id) %></li>
                             <li><a href="#">Payment Details</a></li>
                             <li><a href="#">Solicitor Details</a></li>
                             <li><a href="#">Current/Previous Bids</a></li>
@@ -46,7 +46,7 @@
                             <p><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
                         </div>
                         <div class="col-md-6">
-                            <button class="btn btn-default profile-button">Reset Password</button>
+                            <%= link_to "Reset Password", edit_user_path(current_user.id), :class => "btn btn-default profile-button" %>
                         </div>
                     </div>
                 </div>

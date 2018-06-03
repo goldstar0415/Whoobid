@@ -2,6 +2,7 @@ class User < ApplicationRecord
 
   #Associations
   has_many :auctions, dependent: :destroy
+  has_one :identity, dependent: :destroy
   #Validation
 	before_save { self.email = email.downcase }
   	#validates :name, presence: true, length: { maximum: 50 }

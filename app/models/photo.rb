@@ -5,5 +5,5 @@ class Photo < ApplicationRecord
 	mount_uploader :third_photo, ThirdPhotoUploader # Uploader for this model
 	mount_uploader :fourth_photo, FourthPhotoUploader # Uploader for this model
 	#Association
-	belongs_to :auction, :inverse_of => :auctions
+	belongs_to :auction
 end

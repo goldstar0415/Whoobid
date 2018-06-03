@@ -1,0 +1,173 @@
+<div class="container">
+        <hr/>
+        
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Your Account</h4>
+                    </div>
+                    
+                    <div id="profile-menu" class="col-md-12">
+                        <%= render :partial => '/users/agent_menu' %>
+                    <hr/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <h5>Auction Update</h5>
+                <br/>
+            </div>
+            
+            
+            <div id="auction-update" class="col-md-12 last-profile-section">
+            <%= form_for @auction, :url => user_auction_path(current_user.id, @auction.id), :html => {:class => 'form'} do |f| %>
+
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <%= f.label :address %>
+                            <%= f.text_field :address, class:"form-control" %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :vendor_name, "Vendor's Full Name" %>
+                            <%= f.text_field :vendor_name, class:"form-control" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :contact, "Contact Number" %>
+                            <%= f.text_field :contact, class:"form-control" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :email, "Email" %>
+                            <%= f.text_field :email, class:"form-control" %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <%= f.label :property_type_detached, "Detached" %>
+                                    <%= f.radio_button :property_type, 'detached', class:"form-control" %>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <%= f.label :property_type_semi_detached, "Semi-Detached" %>
+                                    <%= f.radio_button :property_type, 'semi_detached', class:"form-control" %>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <%= f.label :property_type_terrace, "Terrace" %>
+                                    <%= f.radio_button :property_type, 'terrace', class:"form-control" %>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <%= f.label :property_type_flat, "Flat" %>
+                                    <%= f.radio_button :property_type, 'flat', class:"form-control" %>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <%= f.label :property_type_land, "Land" %>
+                                    <%= f.radio_button :property_type, 'land', class:"form-control" %>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                    <%= f.label :property_type_commercial, "Commercial" %>
+                                    <%= f.radio_button :property_type, 'commercial', class:"form-control" %>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :tenure %>
+                            <%= f.text_field :tenure, class:"form-control" %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :auction_date_time, "Date & Time of Auction" %>
+                            <%= f.datetime_field :auction_date_time, class:"form-control" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :auction_method, "Traditional or Moder method of Auction" %>
+                            <%= f.check_box :auction_method, class:"form-control" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :reserve_price %>
+                            <%= f.text_field :reserve_price, class:"form-control"%>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :starting_price, "Starting Price (For bidding)" %>
+                            <%= f.text_field :starting_price, class:"form-control" %>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <%= f.label :key_features %>
+                            <%= f.text_field :key_features, class:"form-control"%>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <%= f.label :property_description %>
+                            <%= f.text_area :property_description, class:"form-control" %>
+                        </div>
+                    </div>
+                </div>               
+
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-10">
+                        <div class="form-group">
+                            <%= f.submit "Update Auction", class:"form-control btn btn-default" %>
+                        </div>
+                    </div>
+                </div>
+
+                <% end %>
+            </div>
+            
+        </div>
+        
+      </div>

@@ -1,0 +1,63 @@
+<%= form_for @identity, :url => user_identities_path(current_user.id), :html => {class: "form"} do |f| %>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                      <%= f.label :name, "Name" %>
+                                      <div class="form-group">
+                                        <%= f.text_field :name, class:"form-control", placeholder:"" %>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                      <%= f.label :address, "Adress" %>
+                                      <div class="form-group">
+                                        <%= f.text_field :adress, class:"form-control", placeholder:"" %>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="row">
+                                    <div class="col-md-2">
+                                      <%= f.label :dob, "DOB" %>
+                                        <div class="form-group">
+                                          <%= f.date_field :dob, class:"form-control"%>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                      <%= f.label :id_number, "ID Number" %>
+                                        <div class="form-group">
+                                          <%= f.text_field :id_number, class:"form-control", placeholder:"" %>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                      <%= f.label :document, "Upload Verified Document" %>
+                                        <div class="form-group">
+                                          <%= f.file_field :document, class:"form-control" %>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                      <%= f.label :address_proof, "Proof of Address" %>
+                                        <div class="form-group">
+                                          <%= f.file_field :adress_proof, class:"form-control" %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-2 col-md-offset-10">
+                                    <div class="form-group">
+                                      <%= f.submit "SAVE", :class => "form-control" %>
+                                    </div>
+                                  </div>
+                                </div>
+<% end %>

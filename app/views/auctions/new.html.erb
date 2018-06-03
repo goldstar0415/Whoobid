@@ -17,17 +17,7 @@
             </div>
 
             <div class="col-md-1 auction-chevron-navigation">
-                <div class="row">
-                    <div class="col-md-6">
-                        <i class="fa fa-chevron-circle-left" style="font-size:30px; color: #C0C0C0"></i>
-                    </div>
-                        
-                    <div class="col-md-6">
-                        <%= link_to user_auctions_path(current_user.id) do %>
-                        <i class="fa fa-chevron-circle-right" style="font-size:30px; color: #EF6C00;"></i>
-                        <% end %>
-                    </div>
-                </div>
+                <%= render 'chevron_new' %>
             </div>
             
             <div id="profile-infos" class="col-md-12 last-profile-section">
@@ -121,7 +111,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <%= f.label :auction_date_time, "Date & Time of Auction" %>
-                            <%= f.text_field :auction_date_time, class:"form-control", placeholder:"Telephone Number*" %>
+                            <%= f.datetime_field :auction_date_time, class:"form-control" %>
                         </div>
                     </div>
 
@@ -190,37 +180,43 @@
 
                 </div>
 
-                <!--<div class="row">
+                
+                <%= f.fields_for :photo do |p| %>
+
+                <div class="row">
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <%= f.label :main_photo, "Main Photo", :class =>"" %>
-                            <%= f.file_field :main_photo, {class:"form-control", :style => ""} %>
+                            <%= p.label :main_photo, "Main Photo", :class =>"" %>
+                            <%= p.file_field :main_photo, {class:"form-control", :style => ""} %>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <%= f.label :second_photo, "Second Photo", :class =>"" %>
-                            <%= f.file_field :second_photo, {class:"form-control", :style => ""} %>
+                            <%= p.label :second_photo, "Second Photo", :class =>"" %>
+                            <%= p.file_field :second_photo, {class:"form-control", :style => ""} %>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <%= f.label :third_photo, "Third Photo", :class =>"" %>
-                            <%= f.file_field :third_photo, {class:"form-control", :style => ""} %>
+                            <%= p.label :third_photo, "Third Photo", :class =>"" %>
+                            <%= p.file_field :third_photo, {class:"form-control", :style => ""} %>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
-                            <%= f.label :fourth_photo, "fourth Photo", :class =>"" %>
-                            <%= f.file_field :fourth_photo, {class:"form-control", :style => ""} %>
+                            <%= p.label :fourth_photo, "fourth Photo", :class =>"" %>
+                            <%= p.file_field :fourth_photo, {class:"form-control", :style => ""} %>
                         </div>
                     </div>
 
-                </div>-->
+                </div>
+
+                <% end %>
+
 
                 <div class="row">
                     <div class="col-md-2 col-md-offset-10">
